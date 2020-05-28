@@ -1,0 +1,53 @@
+﻿@model  IEnumerable<Inventory.Models.Stock>
+<html>
+<head>
+    <title>
+        Inventory System
+    </title>
+    <link rel="shortcut icon" href="Inventory.png">
+    <style>
+        table {
+            border: 1px outset black;
+        }
+
+        th, td {
+            border: 1px inset black;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(211,211,211)">
+
+    <h2 style="text-align:center">INVENTORY SYSTEM</h2>
+    <form method="post">
+        <input type="submit" value="ADD ITEM" formaction="/Home/PasswordAdd">
+       
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Brand</th>
+                <th>Price</th>
+            </tr>
+            @foreach (var a in Model)
+{
+    
+        <tr>
+            <td>@a.Id</td>
+            <td>@a.Name</td>
+            <td>@a.Type</td>
+            <td>@a.Brand</td>
+            <td>@a.Price</td>
+            <td>
+                <a href="/Home/PasswordEdit/@a.Id">Edit</a>
+                </td>
+        </tr>
+
+    
+}
+        </table>
+
+
+    </form>
+</body>
+</html>

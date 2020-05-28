@@ -1,0 +1,26 @@
+﻿@model Inventory.Models.Stock
+<html>
+<head>
+    <title>
+        Inventory System
+    </title>
+    <link rel="shortcut icon" href="Inventory.png">
+</head>
+<body style ="background-color: rgb(211,211,211)">
+
+    <h2 style="text-align:center">INVENTORY SYSTEM</h2>
+    <form method="post">
+        <input type="submit" value="ADD ITEM" formaction="/Home/PasswordAdd">
+       
+    </form>
+        <h3>Display Data</h3>
+        <select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+            <option value="">Select</option>
+            <option value="/Home/Toys">Toys</option>
+            <option value="/Home/Cosmetics">Cosmetics</option>
+            <option value="/Home/Crockery">Crockery</option>
+        </select>
+    
+</body>
+</html>
+

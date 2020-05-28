@@ -1,0 +1,48 @@
+﻿@model Inventory.Models.Stock
+<html>
+<head>
+    <title>
+        Inventory System
+    </title>
+    <link rel="shortcut icon" href="Inventory.png">
+    <style>
+        table {
+            border: 1px outset black;
+        }
+
+        th, td {
+            border: 1px inset black;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(211,211,211)">
+
+    <h2 style="text-align:center">INVENTORY SYSTEM</h2>
+    <h2>Contact Details</h2>
+    <form id="Edit" action="/Home/Edit/@Model.Id" method="get">
+        <div>
+            <div class="wrapper">
+                <strong>Name:</strong>
+                <div class="bg"><input type="text" name="Name" value="@Model.Name" class="input" required></div>
+            </div>
+            <select name="Type"  required>
+                <option value="">Select</option>
+                <option value="Toys">Toys</option>
+                <option value="Cosmetics">Cosmetics</option>
+                <option value="Crockery">Crockery</option>
+            </select>
+            <div class="wrapper">
+                <strong>Brand:</strong>
+                <div class="bg"><input type="text" name="Brand" value="@Model.Brand" class="input" required></div>
+            </div>
+            <div class="wrapper">
+                <strong>Price:</strong>
+                <div class="bg"><input type="text" name="Price" value="@Model.Price" class="input" required>	</div>
+            </div>
+            <a href="#" class="button" onclick="document.getElementById('Edit').submit()"><span><span>Submit Changes</span></span></a>
+        </div>
+    </form>
+</body>
+</html>
+
+

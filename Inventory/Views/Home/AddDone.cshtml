@@ -1,0 +1,54 @@
+﻿@model  IEnumerable<Inventory.Models.Stock>
+          
+           
+            
+<html>
+<head>
+    <title>
+        Inventory System
+    </title>
+    <link rel="shortcut icon" href="Inventory.png">
+    <style>
+        table {
+            border: 1px outset black;
+        }
+
+        th, td {
+            border: 1px inset black;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(211,211,211)">
+
+    <h2 style="text-align:center">INVENTORY SYSTEM</h2>
+    <h2>Contact Details</h2>
+    <form id="Add" action="/Home/Add" method="post">
+        <div>
+            <div class="wrapper">
+                <strong>Name:</strong>
+                <div class="bg"><input type="text" name="Name" class="input" required></div>
+            </div>
+            <div class="wrapper">
+                <strong>Type:</strong>
+                <div class="bg"><select name="Type" required>
+
+    <option value="Toys">Toys</option>
+    <option value="Cosmetis">Cosmetics</option>
+    <option value="Crockery">Crockery</option>
+</select></div>
+            </div>
+            <div class="wrapper">
+                <strong>Brand:</strong>
+                <div class="bg"><input type="text" name="Brand" class="input"required></div>
+            </div>
+            <div class="wrapper">
+                <strong>Price:</strong>
+                <div class="bg"><input type="text" name="Price" class="input" required>	</div>
+            </div>
+            <a href="#" class="button" onclick="document.getElementById('Add').submit()"><span><span>Add</span></span></a>
+        </div>
+    </form>
+</body>
+</html>
+
+
